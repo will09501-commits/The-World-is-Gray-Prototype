@@ -3,22 +3,21 @@
 [ext_resource type="Script" uid="uid://db3v8yyug3xfw" path="res://scripts/boss_1.gd" id="1_gu4qg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4int"]
+size = Vector2(16.6667, 16.8333)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gu4qg"]
 
-[node name="Boss1" type="CharacterBody2D"]
+[node name="Boss1" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_gu4qg")
 
-[node name="hitbox" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, -60)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["enemy"]]
+position = Vector2(0, -50.5)
 scale = Vector2(6, 6)
 shape = SubResource("RectangleShape2D_j4int")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -60)
-scale = Vector2(120, 120)
+position = Vector2(0, -50)
+scale = Vector2(100, 100)
 texture = SubResource("PlaceholderTexture2D_gu4qg")
 
 [node name="Marker2D" type="Marker2D" parent="."]

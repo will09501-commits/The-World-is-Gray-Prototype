@@ -11,7 +11,7 @@ func _on_body_entered(body: Node2D) -> void:
 	print("you fell")
 	print(player.position)
 	timer.start()
-	if body.get_class() == "CharacterBody2D":
+	if body.is_in_group('Player'):
 		body.apply_knockback(Vector2.ZERO,0,0)
 	
 

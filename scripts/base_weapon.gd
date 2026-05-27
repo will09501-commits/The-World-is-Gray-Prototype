@@ -14,7 +14,6 @@ func get_stats() -> Dictionary:
 	return {"damage": damage, "manaCost": manaCost, "cooldown": cooldown}
 
 func _on_body_entered(body: Node2D) -> void:
-	print("Collides")
 	if body.is_in_group("enemy"):
 		body.apply_damage(damage, (body.global_position - global_position).normalized(), knforce, knduration)
 

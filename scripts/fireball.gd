@@ -1,7 +1,7 @@
 extends Area2D
 @export var SPEED = 200
 @export var manaCost = 20
-@export var cooldown = 2
+@export var cooldown = 1.5
 @export var damage = 20
 @export var doesDamage = true
 @export var knforce = 20

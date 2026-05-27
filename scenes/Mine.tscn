@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cium8jk071qye"]
+[gd_scene load_steps=5 format=3 uid="uid://cium8jk071qye"]
 
 [ext_resource type="Texture2D" uid="uid://ewi34cwyn7jn" path="res://assets/sprites/world_tileset.png" id="1_rrkvo"]
-[ext_resource type="Script" uid="uid://6xa8k08kt1b0" path="res://scripts/mine.gd" id="1_xpffi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpffi"]
 size = Vector2(16, 16)
@@ -22,7 +21,6 @@ animations = [{
 }]
 
 [node name="Mine" type="Area2D"]
-script = ExtResource("1_xpffi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xpffi")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=36 format=3 uid="uid://dwsddm5no3ulm"]
 
 [ext_resource type="Script" uid="uid://bjmgfe0u46f2r" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://spbtyhrmolnu" path="res://assets/sprites/knight.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://daivnoh0v5aai" path="res://assets/sprites/knight.png" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(9, 15)
+size = Vector2(9, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gl8cc"]
 atlas = ExtResource("2_g2els")
@@ -288,7 +288,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_g2els")
@@ -296,7 +296,7 @@ jump_force = 400
 iframes = 0.8
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, -7.5)
+position = Vector2(-1.5, -6)
 shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -304,7 +304,8 @@ position = Vector2(0, -30)
 zoom = Vector2(4, 4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -12)
+position = Vector2(-1, -9.5)
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_smehm")
 animation = &"cast"
 autoplay = "idle"

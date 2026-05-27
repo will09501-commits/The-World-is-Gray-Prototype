@@ -148,6 +148,10 @@ size = Vector2(683, 20)
 
 [node name="world" type="Node2D"]
 
+[node name="Boss1" parent="." instance=ExtResource("5_71j4m")]
+z_index = -2
+position = Vector2(456, 432)
+
 [node name="player" parent="." instance=ExtResource("1_nnsk1")]
 position = Vector2(374, 420)
 
@@ -168,6 +172,3 @@ respawny = 420
 position = Vector2(447, 611)
 scale = Vector2(36.6011, 8.09379)
 shape = SubResource("RectangleShape2D_k0juu")
-
-[node name="Boss1" parent="." instance=ExtResource("5_71j4m")]
-position = Vector2(456, 432)
