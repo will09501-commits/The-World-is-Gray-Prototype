@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://hgwikwaafosg"]
+
+[ext_resource type="Script" uid="uid://b17765ioik45p" path="res://scripts/fallzone.gd" id="1_756eq"]
+
+[node name="Fallzone" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_756eq")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

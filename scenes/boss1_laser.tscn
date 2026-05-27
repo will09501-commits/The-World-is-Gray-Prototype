@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://4pfp3f0nn8ly"]
+
+[ext_resource type="Script" uid="uid://gd0dxuvxjehf" path="res://scripts/boss_1_laser.gd" id="1_hcgow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wc6il"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hcgow"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hcgow"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rlm71"]
+
+[node name="boss1_laser" type="Area2D"]
+script = ExtResource("1_hcgow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(15, 0.5)
+shape = SubResource("RectangleShape2D_wc6il")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(300, 10)
+texture = SubResource("PlaceholderTexture2D_hcgow")
+
+[node name="Boom" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_hcgow")
+scale = Vector2(300, 10)
+texture = SubResource("PlaceholderTexture2D_rlm71")

@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://c72qrx04vpi7o"]
+
+[ext_resource type="Script" uid="uid://dm1x1ooo6uu7p" path="res://scripts/fireball.gd" id="1_1gl40"]
+[ext_resource type="Texture2D" uid="uid://ewi34cwyn7jn" path="res://assets/sprites/world_tileset.png" id="2_cb14k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7kba2"]
+size = Vector2(18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_487ah"]
+atlas = ExtResource("2_cb14k")
+region = Rect2(160, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_43lgj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_487ah")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Fireball" type="Area2D" groups=["damagers"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_1gl40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7kba2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.125, 0.625)
+sprite_frames = SubResource("SpriteFrames_43lgj")
+animation = &"new_animation"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-8.9407e-08, 0)
+scale = Vector2(0.9, 0.5)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
