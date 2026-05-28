@@ -19,11 +19,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	
 	if body.is_in_group('Player'):
-		
 		var knockback_direction = (body.global_position - global_position).normalized()
-		knockback_direction.y -= 2
-		print(knockback_direction)
+		knockback_direction.y -= 1
 		body.apply_knockback(knockback_direction, 200, 0.12)
 		

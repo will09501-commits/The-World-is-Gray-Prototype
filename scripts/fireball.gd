@@ -8,7 +8,8 @@ extends Area2D
 @export var knduration = 0.32
 @onready var velocity = Vector2()
 @export var freeze_time = 0.5
-@export var stats = {"damage": damage, "manaCost": manaCost, "cooldown": cooldown, "freeze_time": freeze_time}
+var stats = {"damage": damage, "manaCost": manaCost, "cooldown": cooldown, "freeze_time": freeze_time}
+
 func _ready():
 	pass
 func _physics_process(delta: float) -> void:
@@ -24,6 +25,5 @@ func get_damage_vars() -> Array:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("collides with " + str(body.get_groups()))
 	if body.is_in_group("enemy"):
 		body.apply_damage(damage, (body.global_position - global_position).normalized(), knforce, knduration)

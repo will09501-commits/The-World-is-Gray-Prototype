@@ -1,19 +1,19 @@
 [gd_scene load_steps=7 format=3 uid="uid://bylxx3ineq0wg"]
 
 [ext_resource type="Script" uid="uid://ro5t1vyphs8g" path="res://scripts/boss1_wall.gd" id="1_c3ehx"]
-[ext_resource type="Texture2D" uid="uid://ewi34cwyn7jn" path="res://assets/sprites/world_tileset.png" id="1_xh434"]
+[ext_resource type="Texture2D" uid="uid://c283i07ooq7cm" path="res://assets/Grotto-escape-2-files/PNG/environment-tiles.png" id="2_c3ehx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c3ehx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c3ehx"]
-atlas = ExtResource("1_xh434")
-region = Rect2(0, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0w65"]
+atlas = ExtResource("2_c3ehx")
+region = Rect2(561, 112, 17, 65)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w0w65"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c3ehx")
+"texture": SubResource("AtlasTexture_w0w65")
 }],
 "loop": true,
 "name": &"default",
@@ -21,7 +21,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1h4uu"]
-size = Vector2(20, 97)
+size = Vector2(21, 97)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
 collision_layer = 255
@@ -31,10 +31,10 @@ sync_to_physics = false
 script = ExtResource("1_c3ehx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-4.76837e-07, -48.5)
-scale = Vector2(1.25, 6.0625)
+position = Vector2(1.1875, -48)
+scale = Vector2(1.38971, 1.53846)
 sprite_frames = SubResource("SpriteFrames_w0w65")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -49)
+position = Vector2(-0.5, -49)
 shape = SubResource("RectangleShape2D_1h4uu")

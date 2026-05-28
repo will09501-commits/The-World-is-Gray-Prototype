@@ -24,5 +24,12 @@ The core engineering logic is organized into clean directories to pass professio
 * `/assests` - Contains all assests used in it
 
 ## Credits & Licensing
+**[Asset Name]** by [Artist Username/Name] ([Link to OpenGameArt Asset Page]), licensed under [License Type with Link].
 * **Gameplay Assets:** Sourced from the [Brackeys Platformer Bundle](https://brackeysgames.itch.io/brackeys-platformer-bundle) via itch.io (Licensed under **CC0 / Public Domain**).
 * **Original Asset Artistry:** Credit to `analogStudios_` and `RottingPixels` for the underlying sprite architectures and tilesets.
+* **Bosses and monsters spritesheets (Ars Notoria)** by [Stephen Challener (Redshrike)] (https://opengameart.org/content/bosses-and-monsters-spritesheets-ars-notoria), licensed under CC-BY 3.0 https://creativecommons.org/licenses/by/3.0/.
+* **Cyberpunk Street Environment** by [ansimuz.com] (https://opengameart.org/content/cyberpunk-street-environment), licensed under CC-BY 3.0 https://creativecommons.org/licenses/by/3.0/.
+* **Hero spritesheets (Ars Notoria)** by [Balmer] (https://opengameart.org/content/hero-spritesheets-ars-notoria), licensed under CC0 https://creativecommons.org/publicdomain/zero/1.0/.
+* **Gothicvania Town** by [Luis Zuno @ansimuz] (https://opengameart.org/content/gothicvania-town), licensed under CC0 https://creativecommons.org/publicdomain/zero/1.0/.
+* **Grotto Escape II - Environment** by [ansimuz.com] (https://opengameart.org/content/grotto-escape-ii-environment), licensed under CC-BY 3.0 https://creativecommons.org/licenses/by/3.0/.
+* **Free Pixel Effects Pack** by [CodeManu] (https://opengameart.org/content/free-pixel-effects-pack), licensed under CC0 https://creativecommons.org/publicdomain/zero/1.0/.

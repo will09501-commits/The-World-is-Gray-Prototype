@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #@onready var player: CharacterBody2D = $"../player"
-@onready var sprite: Sprite2D = $Sprite2D
+#@onready var sprite: AnimSprite2D = $AnimatedSprite2D
 
 @export var health: int = 200
 const LASER = preload("res://scenes/boss1_laser.tscn")
@@ -13,7 +13,7 @@ var direction = 1
 var knockback: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
 var attack_cooldown = 2.0
-var attacks = {walls: 8}
+var attacks = {lasers: 6, walls: 10}
 func _physics_process(delta: float) -> void:
 	if attack_cooldown > 0:
 		attack_cooldown -= delta
@@ -24,14 +24,14 @@ func _physics_process(delta: float) -> void:
 	if invincible_timer > 0:
 		invincible_timer -= delta
 	if invincible_timer <= 0:
-		$Sprite2D.modulate = Color.HOT_PINK
+		$AnimatedSprite2D.modulate = Color.WHITE
 		invincible_timer = 0
 	
 func apply_damage(damage: int, kndirection: Vector2, force: float, knockback_duration: float):	
 	if invincible_timer <= 0:
 		invincible_timer = 0.3
 		health -= damage
-		$Sprite2D.modulate = Color.RED
+		$AnimatedSprite2D.modulate = Color.RED
 		#knockback = kndirection * force
 		#knockback_timer = knockback_duration
 func _on_hitbox_body_entered(body: Node2D) -> void:
@@ -71,5 +71,5 @@ func walls():
 	var spike = SPIKE.instantiate()
 	get_parent().add_child(spike)
 	spike.position = $Marker2D.global_position
-	spike.move_local_y(60)
+	spike.move_local_y(75)
 	spike.move_local_x(target - $Marker2D.global_position.x)
