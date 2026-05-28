@@ -1,4 +1,4 @@
-# theworldisgray
+## The World is Gray
 A game that I am currently working on making a 2d metroidvania that is combat focused and boss focused
 An independent technical prototype developed in **Godot 4** using **GDScript**. This project serves as a sandbox to implement modular, decoupled gameplay systems, custom character physics, and scalable event architecture.
 
